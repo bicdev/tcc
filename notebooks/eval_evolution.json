@@ -1,0 +1,69 @@
+{
+    "minimal-dirty-catboost": {
+        "DataPrepSteps": [
+            "PADRONIZING START_STATION_ID DATA TYPE (VERY IMPORTANT FOR PANDAS)",
+            "EXTRACTING TIME-BASED FEATURES",
+            "AGGREGATING BY DAY-HOUR FOR EACH STATION"
+        ],
+        "Features": {
+            "categorical_features": [
+                "start_station_id",
+                "weekday"
+            ],
+            "numeric_features": [
+                "avg_trip_duration",
+                "day",
+                "hour"
+            ]
+        },
+        "Architecture": {
+            "preprocess":       "False",
+            "transform_target": "False",
+            "normalize":        "False",
+            "remove_outliers":  "False",
+            "model":            "catboost",
+            "is_tuned":         "False"
+        },
+        "Evaluation": {
+            "MAE":  1.4336,
+            "MSE":	5.6226,
+            "RMSE": 2.3710,
+            "R2":	0.6497,
+            "RMSLE":0.3930,
+            "MAPE": 0.5672
+        }
+    },
+    "test": {
+        "DataPrepSteps": [
+            "PADRONIZING START_STATION_ID DATA TYPE (VERY IMPORTANT FOR PANDAS)",
+            "EXTRACTING TIME-BASED FEATURES",
+            "AGGREGATING BY DAY-HOUR FOR EACH STATION"
+        ],
+        "Features": {
+            "categorical_features": [
+                "start_station_id",
+                "weekday"
+            ],
+            "numeric_features": [
+                "avg_trip_duration",
+                "day",
+                "hour"
+            ]
+        },
+        "Architecture": {
+            "preprocess":       "True",
+            "transform_target": "True",
+            "normalize":        "True",
+            "remove_outliers":  "True",
+            "model":            "catboost"
+        },
+        "Evaluation": {
+            "MAE":  1.4390,
+            "MSE":	5.6488,
+            "RMSE": 2.3765,
+            "R2":	1.0,
+            "RMSLE":1.0,
+            "MAPE": 1.0
+        }
+    }
+}
