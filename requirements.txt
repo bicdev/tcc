@@ -1,5 +1,0 @@
-numpy
-pandas
-pycaret[full]
-geopy
-geodatasets

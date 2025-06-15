@@ -1,6 +1,0 @@
-notebooks/logs.log
-notebooks/__pycache__/data_pipeline.cpython-39.pyc
-*.csv
-*.zip
-.venv
-notebooks/content/race_comparison_manhattan.geojson
